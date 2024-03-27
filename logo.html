@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Effect</title>
+
+  <style>
+    body{
+        background-color: #eeff00;
+    }
+    section {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+    #typewriter {
+      font-size: 50px;
+      color: #fffff3;
+      padding-right: 5px; /* Adds a small space after the text */
+      font-weight:700;
+
+
+    }
+    button{
+    width: 20%;
+    height: 50px;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    left: 40%;
+    bottom: 220px;
+  }
+  </style>
+</head>
+<body>
+    <section>
+        <div id="typewriter"></div>
+    </section>
+    <a href="login form.html">
+    <button >Get Started</button>
+</a>
+
+  <script>
+    const text = "Snapchat";
+    
+    const speed = 150; // Typing speed in milliseconds
+    let index = 0;
+    
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    
+    // Start typewriter effect
+    typeWriter();
+  </script>
+</body>
+</html>
